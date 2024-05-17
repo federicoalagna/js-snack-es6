@@ -16,10 +16,17 @@ const squadreCalcio = [
   console.log("Array di squadre di calcio:");
   console.log(squadreCalcio);
 
-  
+
   // genero i numeri random per le proprietà vuote
 squadreCalcio.forEach(squadra => {
     squadra.puntiTotali = Math.floor(Math.random() * 100);
     squadra.falliSubiti = Math.floor(Math.random() * 100);
   });
   
+  // array con nome e falli subiti
+const nomiEFalliSubiti = squadreCalcio.map(squadra => ({
+    nome: squadra.nome,
+    falliSubiti: squadra.falliSubiti
+  }));
+console.log("\nArray con solo nome e falli subiti:");
+console.log(nomiEFalliSubiti);
