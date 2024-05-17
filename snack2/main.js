@@ -13,3 +13,13 @@ const squadreCalcio = [
     { nome: "Verona", puntiTotali: 0, falliSubiti: 0 },
     { nome: "Sassuolo", puntiTotali: 0, falliSubiti: 0 }
   ];
+  console.log("Array di squadre di calcio:");
+  console.log(squadreCalcio);
+
+  
+  // genero i numeri random per le proprietà vuote
+squadreCalcio.forEach(squadra => {
+    squadra.puntiTotali = Math.floor(Math.random() * 100);
+    squadra.falliSubiti = Math.floor(Math.random() * 100);
+  });
+  
